@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabasaki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/icons8-spotify-50.png"> 
+</head>
+
+<body class="text-black font-sans">
+
+    <audio id="introSound" src="kawa.wav"></audio>
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-10 py-5 ">
+            <img src="img/kabasaki_logo.png" alt="Kabasaki Logo" class="logo">
+    </header>
+    
+    <!-- Social Icons -->
+    <section class="flex justify-center gap-4 my-0">
+        <a href="https://kabasaki.myshopify.com/" target="_blank" class="hover-image">
+            <img src="img/MERCHBOTON.png" alt="Tour">
+            <img src="img/MERCHBOTONnuevo.png" alt="Tour Hover">
+        </a>
+        <a href="https://www.instagram.com/Kabasakiprod" target="_blank">
+            <img src="img/icons8-instagram-50.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://x.com/Kabasakiprod" target="_blank">
+            <img src="img/icons8-x-50.png" alt="X" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com/@Kabasaki" target="_blank">
+            <img src="img/icons8-youtube-50.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://open.spotify.com/intl-es/artist/4rO00pQq33bIv73QyJdivX" target="_blank">
+            <img src="img/icons8-spotify-50.png" alt="Spotify" class="social-icon">
+        </a>
+        <a href="https://www.tiktok.com/@kabasakiprod" target="_blank">
+            <img src="img/icons8-tik-tok-50.png" alt="Tiktok" class="social-icon">
+        </a>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/artist/4rO00pQq33bIv73QyJdivX?utm_source=generator&theme=0" width="50%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </main>
+    
+</body>
+
+<script>
+document.addEventListener("click", function playOnce() {
+    let audio = document.getElementById("introSound");
+    audio.play();
+    // document.removeEventListener("click", play); //  Se reproduce solo una vez
+});
+</script>
+</html>

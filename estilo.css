@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-height: 100vh;
+}
+
+/* Fondo gris claro */
+body {
+    /* background-color: #868991;   Gris claro tirando a blanco */
+
+    /* Quiero que haya varios colores en el fondo, el gris de arriba y negro */
+    background-color: #868991;
+
+    color: #000; /* Color del texto */
+
+    background-image: 
+        url("img/fondo_ruido_kaba.png");
+    background-repeat: no-repeat;
+    
+    /* Quiero que se rellene el fondo entero */
+    background-size: cover;
+    
+}
+
+/* General Links */
+a img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Header Links */
+.header-link {
+    width: 80px;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    position: relative; /* Necesario para que los elementos hijos con posición absoluta se basen en el header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    z-index: 100%;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+/* Logo */
+.logo {
+    width: 300px;
+    position: absolute; /* Saca el logo del flujo normal del diseño */
+    top: 50%; /* Centrado verticalmente en el header */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra completamente el logo */
+    z-index: 10; /* Asegura que el logo esté por encima de otros elementos */
+}
+
+
+/* Hover Image Wrapper */
+.hover-image {
+    position: relative;
+    display: inline-block;
+    width: 90px; /* Tamaño de la imagen */
+    height: 90px;
+    cursor: pointer;
+}
+
+/* Normal Image */
+.hover-image img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Image */
+.hover-image img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* On Hover */
+.hover-image:hover img:first-child {
+    opacity: 0;
+}
+
+.hover-image:hover img:last-child {
+    opacity: 1;
+}
+
+/* Social Icons */
+section {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Centra los íconos verticalmente */
+    gap: 1rem; /* Espaciado entre los íconos */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+.social-icon {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Efecto hover */
+}
+
+
+/* Main Content */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Reduce el espacio entre los álbumes */
+    padding: 1rem 0;
+}
+
+/* Estilos generales para el iframe */
+.spotify-embed {
+    width: 50%; /* Asegura que el iframe ocupe todo el ancho del contenedor */
+    height: 555px; /* Altura predeterminada */
+    border-radius: 12px;
+}
+
+
+
+/* Footer Links */
+.footer-link {
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-link:hover {
+    transform: scale(1.1);
+}
+
+footer{
+    position: fixed; /* Hace que el footer sea fijo */
+    bottom: 0; /* Ancla el footer en la parte inferior de la pantalla */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 100; /* Asegura que el footer esté sobre otros elementos */
+    display: flex;
+    justify-content: space-around; /* Alinea los elementos de forma horizontal */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 10px 0; /* Espaciado interno */
+}
+
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+
+    html, body {
+        height: 100vh; /* Forzar que el alto máximo sea la altura de la pantalla */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden; /* Evitar que haya desplazamiento si el contenido es mayor a la pantalla */
+    }
+
+    body {
+        background-color: #868991;  /*  Gris claro tirando a blanco */
+        color: #000; /* Color del texto */
+        background-image: url("img/fondo_ruido_kaba.png");
+        background-repeat: no-repeat;
+        
+        /* Quiero que se rellene el fondo entero */
+        background-size: cover;
+        }
+
+    /* Estilos generales para el iframe */
+    .spotify-embed {
+        width: 80%; /* Asegura que el iframe ocupe todo el ancho del contenedor */
+        height: 70vh; /* Altura predeterminada */
+        border-radius: 12px;
+    }
+
+     /* Header */
+     header {
+        display: flex; /* Activa el modo flexbox */
+        flex-direction: row; /* Alinea los elementos horizontalmente */
+        justify-content: space-between; /* Distribuye el espacio entre los elementos */
+        align-items: center; /* Centra los elementos verticalmente */
+        padding: 10px 0; /* Espaciado interno */
+        margin-bottom: 50px;
+    }
+
+    /* Logo */
+    .logo {
+        width: 300px; /* Tamaño ajustado del logo */
+        margin-bottom: 5px; /* Espaciado inferior */
+        margin-top: 25px; /* Espaciado superior para bajar el logo */
+    }
+
+
+    /* Social Icons */
+    section {
+        margin-top: 10px; /* Espaciado superior */
+        display: flex;
+        justify-content: center; /* Centra los íconos horizontalmente */
+        gap: 15px; /* Espaciado entre los íconos */
+    }
+
+    .social-icon {
+        width: 35px; /* Tamaño reducido para móviles */
+        height: auto;
+    }
+}
+
+/* Para tabletas */
+@media (max-width: 1024px) {
+    .spotify-embed {
+        width: 80%; /* Asegura que el iframe ocupe todo el ancho del contenedor */
+        height: 70vh; /* Altura predeterminada */
+        border-radius: 12px;
+    }
+
+    body {
+        background-color: #868991;  /*  Gris claro tirando a blanco */
+        color: #000; /* Color del texto */
+        background-image: url("img/fondo_ruido_kaba.png");
+        background-repeat: no-repeat;
+        
+        /* Quiero que se rellene el fondo entero */
+        background-size: cover;
+        
+    }
+}
+
+
+/* Para laptops y pantallas medianas */
+@media (max-width: 1280px) {
+    .spotify-embed {
+        width: 80%; /* Asegura que el iframe ocupe todo el ancho del contenedor */
+        height: 70vh; /* Altura predeterminada */
+        border-radius: 12px;
+    }
+
+    body {
+        background-color: #868991;  /*  Gris claro tirando a blanco */
+        color: #000; /* Color del texto */
+        background-image: url("img/fondo_ruido_kaba.png");
+        background-repeat: no-repeat;
+        
+        /* Quiero que se rellene el fondo entero */
+        background-size: cover;
+        
+    }
+}
+
