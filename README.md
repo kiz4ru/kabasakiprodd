@@ -1,6 +1,6 @@
 # WEB
 
-Bienvenido al portafolio de un productor de música profesional. Este proyecto muestra las habilidades y trabajos del productor utilizando HTML, CSS y JavaScript.
+Bienvenido al portafolio. Este proyecto muestra las habilidades y trabajos del productor utilizando HTML, CSS y JavaScript.
 
 ## Tabla de Contenidos
 - [Acerca de](#acerca-de)
